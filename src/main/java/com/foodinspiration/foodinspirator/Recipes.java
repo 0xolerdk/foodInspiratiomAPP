@@ -9,12 +9,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
-@Document(collection = "recepies")
+@Document(collection = "recipes")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Recepies {
+public class Recipes {
     @Id
     private ObjectId id;
 
