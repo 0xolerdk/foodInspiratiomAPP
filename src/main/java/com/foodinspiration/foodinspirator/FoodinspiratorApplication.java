@@ -21,14 +21,17 @@ public class FoodinspiratorApplication {
 		SpringApplication.run(FoodinspiratorApplication.class, args);
 	}
 
-	@PostConstruct
-	public void init() {
-		Recipes recipe = new Recipes();
-		recipe.setImdbID("tt1234567");
-		recipe.setTitle("Example Recipe");
-		recipe.setIngredients(Arrays.asList("Ingredient 1", "Ingredient 2", "Ingredient 3"));
 
-		recipesRepository.insert(recipe);
-	}
-
+	//for test. This adds new receipts in DB
+	//not needed
+//	@PostConstruct
+//	public void init() {
+//		Recipes recipe = new Recipes();
+//		recipe.setImdbID("tt1234567");
+//		recipe.setTitle("Example Recipe");
+//		recipe.setIngredients(Arrays.asList("Ingredient 1", "Ingredient 2", "Ingredient 3"));
+//
+//		recipesRepository.insert(recipe);
+//	}
+//
 }
