@@ -23,9 +23,14 @@ public class RecipesController {
 
     }
 
-    @GetMapping("/{imdbID}")
-    public ResponseEntity<Optional<Recipes>> getSingleRecipe(@PathVariable String imdbID){
-        return new ResponseEntity<Optional<Recipes>>(recipesService.singleRecipe(imdbID),
+    @GetMapping("/{id1}")
+    public ResponseEntity<Optional<Recipes>> getSingleRecipe(@PathVariable String id1){
+        return new ResponseEntity<Optional<Recipes>>(recipesService.singleRecipe(id1),
                 HttpStatus.OK);
+    }
+
+    @GetMapping("/strings")
+    public ResponseEntity<List<Recipes>> getListOfStrings(@RequestParam("list") List<String> strings) {
+        return new ResponseEntity<>(recipesService.findRecipesByIngredients(strings), HttpStatus.OK);
     }
 }

@@ -14,8 +14,16 @@ public class RecipesService {
         return recipesRepository.findAll();
     }
 
+    public Optional<Recipes> singleRecipe(String id1){
+        return recipesRepository.findRecipesByid1(id1);
+    }
+
+    public List<Recipes> findRecipesByIngredients(List<String> ingredients) {
+        return recipesRepository.findRecipesByingredients(ingredients);
+
     public Optional<Recipes> singleRecipe(String imdbID){
         return recipesRepository.findRecipesByImdbID(imdbID);
+
     }
 
 }
