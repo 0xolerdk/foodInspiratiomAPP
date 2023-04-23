@@ -20,6 +20,10 @@ public class RecipesService {
 
     public List<Recipes> findRecipesByIngredients(List<String> ingredients) {
         return recipesRepository.findRecipesByingredients(ingredients);
+
+    public Optional<Recipes> singleRecipe(String imdbID){
+        return recipesRepository.findRecipesByImdbID(imdbID);
+
     }
 
 }
