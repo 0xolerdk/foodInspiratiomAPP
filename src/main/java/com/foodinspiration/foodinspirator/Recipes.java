@@ -24,5 +24,6 @@ public class Recipes {
 
     private List<String> ingredients;
 
+    private  String id1;
 
 }
